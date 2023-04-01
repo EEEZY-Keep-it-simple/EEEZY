@@ -1,0 +1,90 @@
+#links a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+#links a::before,
+#links a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+#links a::before {
+  background-image: linear-gradient(to right, #FA7D09, #FEB635, #FFC875);
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+#links a::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  font-style: normal;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#links a:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+  /*Ads snake*/
+  /*animation: snake 2s linear infinite;*/
+}
+
+#links a:hover::after {
+  transform: translate3d(0, 0, 0);
+  color: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: inherit;
+}
+
+#links a span {
+  display: inline-block;
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+#links a:hover span {
+  transform: translate3d(-200%, 0, 0);
+}
+
+a[data-replace]:hover::after {
+  color: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: inherit;
+}
+
+
+@keyframes snake {
+  0% {
+    border-image: linear-gradient(to right, #fa7d09, #feb635, #ffc875);
+    border-image-slice: 1;
+    transform: translateX(0);
+  }
+  50% {
+    border-image: linear-gradient(to right, #b4a07a, #d4c4a9, #f2efe8);
+    border-image-slice: 1;
+    transform: translateX(100%);
+  }
+  100% {
+    border-image: linear-gradient(to right, #fa7d09, #feb635, #ffc875);
+    border-image-slice: 1;
+    transform: translateX(0);
+  }
+}

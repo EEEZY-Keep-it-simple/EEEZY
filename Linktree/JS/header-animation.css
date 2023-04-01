@@ -1,0 +1,84 @@
+.header-slogan h2 > span, .header-brand h1 > span {
+  display: inline-block;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  opacity: 0;
+}
+
+.header-slogan h2 > span:nth-child(1), .header-brand h1 > span:nth-child(1) {
+  animation-name: fadeInFromLeft;
+  animation-delay: 0.1s;
+}
+
+.header-slogan h2 > span:nth-child(2), .header-brand h1 > span:nth-child(2) {
+  animation-name: fadeInFromLeft;
+  animation-delay: 0.2s;
+}
+
+.header-slogan h2 > span:nth-child(3), .header-brand h1 > span:nth-child(3) {
+  animation-name: fadeInFromLeft;
+  animation-delay: 0.3s;
+}
+
+.header-slogan h2 > span:nth-child(4), .header-brand h1 > span:nth-child(4) {
+  animation-name: fadeInFromLeft;
+  animation-delay: 0.4s;
+}
+
+.header-slogan h2 > span:nth-child(5), .header-brand h1 > span:nth-child(5) {
+  animation-name: fadeInFromLeft;
+  animation-delay: 0.5s;
+}
+
+.header-slogan h2 > span:nth-child(6) {
+  animation-name: fadeInFromLeft;
+  animation-delay: 0.6s;
+}
+
+.header-slogan h2 > span:nth-child(7) {
+  animation-name: fadeInFromLeft;
+  animation-delay: 0.7s;
+}
+
+.header-slogan h2 > span:nth-child(8) {
+  animation-name: fadeInFromLeft;
+  animation-delay: 0.8s;
+}
+
+.header-slogan h2 > span:nth-child(9) {
+  animation-name: fadeInFromLeft;
+  animation-delay: 0.9s;
+}
+
+.header-slogan h2 > span:nth-child(10) {
+  animation-name: fadeInFromLeft;
+  animation-delay: 1s;
+}
+
+.header-slogan h2 > span:nth-child(11) {
+  animation-name: fadeInFromLeft;
+  animation-delay: 1.1s;
+}
+
+.header-slogan h2 > span:nth-child(12) {
+  animation-name: fadeInFromLeft;
+  animation-delay: 1.2s;
+}
+
+.header-slogan h2 > span:nth-child(13) {
+  animation-name: fadeInFromLeft;
+  animation-delay: 1.3s;
+}
+
+
+@keyframes fadeInFromLeft {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
